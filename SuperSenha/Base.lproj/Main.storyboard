@@ -283,7 +283,7 @@
                                     <action selector="closeView:" destination="NDU-Fb-U08" eventType="touchUpInside" id="yGg-TD-5W4"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-rj-Kds">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-rj-Kds">
                                 <rect key="frame" x="20" y="51" width="374" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
