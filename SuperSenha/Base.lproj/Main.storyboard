@@ -163,6 +163,14 @@
                     <navigationItem key="navigationItem" title="Gerador de Senhas" id="rLE-eT-fYr">
                         <barButtonItem key="backBarButtonItem" title="Gerador de Senhas" id="dj3-cM-bM0"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="swCapitalLetters" destination="IvQ-Hy-Gab" id="X0q-df-BnP"/>
+                        <outlet property="swLetters" destination="Kgg-gL-wQf" id="Q7O-jX-DfV"/>
+                        <outlet property="swNumbers" destination="BiT-2O-Bbx" id="VH8-JA-fPP"/>
+                        <outlet property="swSpecialCharacters" destination="fK0-wh-bJH" id="gMM-1B-uUH"/>
+                        <outlet property="tfNumberOfCharacters" destination="dCv-fk-kfv" id="FDa-DM-Lan"/>
+                        <outlet property="tfTotalPasswords" destination="ILJ-ZQ-lI6" id="dRB-pc-DPq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,7 +179,7 @@
         <!--Lista de Senhas-->
         <scene sceneID="3Z4-Zt-tIS">
             <objects>
-                <viewController id="jiR-KC-EX5" sceneMemberID="viewController">
+                <viewController id="jiR-KC-EX5" customClass="PasswordsViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HAn-Z0-owk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,6 +207,9 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="generate:" destination="jiR-KC-EX5" eventType="touchUpInside" id="9dZ-EG-gsL"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="99999" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9u2-NB-XyN">
                                 <rect key="frame" x="20" y="166" width="374" height="566"/>
@@ -223,6 +234,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Lista de Senhas" id="LJe-iZ-Sjo"/>
+                    <connections>
+                        <outlet property="tvPasswords" destination="9u2-NB-XyN" id="grF-8g-fip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4LO-9A-aZ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="31.884057971014496" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Security Tips View Controller-->
         <scene sceneID="mCe-UA-9lr">
             <objects>
-                <viewController id="NDU-Fb-U08" sceneMemberID="viewController">
+                <viewController id="NDU-Fb-U08" customClass="SecurityTipsViewController" customModule="SuperSenha" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ugT-4l-Uts">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,8 +279,11 @@
                                 <state key="normal" title="Fechar">
                                     <color key="titleColor" red="0.59607843140000005" green="0.14117647059999999" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="closeView:" destination="NDU-Fb-U08" eventType="touchUpInside" id="yGg-TD-5W4"/>
+                                </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-rj-Kds">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Bo-rj-Kds">
                                 <rect key="frame" x="20" y="51" width="374" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <attributedString key="attributedText">
@@ -441,6 +458,7 @@ Há diversos programas disponíveis que armazenam os dados de maneira segura e a
                             <constraint firstItem="yYK-iT-kkv" firstAttribute="trailing" secondItem="2Bo-rj-Kds" secondAttribute="trailing" constant="20" id="FfY-Xt-L7R"/>
                             <constraint firstItem="2Bo-rj-Kds" firstAttribute="leading" secondItem="yYK-iT-kkv" secondAttribute="leading" constant="20" id="aVq-ZA-8dg"/>
                             <constraint firstItem="yYK-iT-kkv" firstAttribute="trailing" secondItem="rId-6d-Ohs" secondAttribute="trailing" constant="24" id="iI0-dp-sjT"/>
+                            <constraint firstItem="2Bo-rj-Kds" firstAttribute="top" secondItem="kZk-bz-nup" secondAttribute="bottom" constant="17" id="lyC-bj-a6q"/>
                             <constraint firstItem="rId-6d-Ohs" firstAttribute="top" secondItem="2Bo-rj-Kds" secondAttribute="bottom" constant="51" id="oeO-gX-qe1"/>
                             <constraint firstItem="kZk-bz-nup" firstAttribute="top" secondItem="yYK-iT-kkv" secondAttribute="top" constant="12" id="pJe-Gx-5U7"/>
                             <constraint firstItem="kZk-bz-nup" firstAttribute="centerX" secondItem="ugT-4l-Uts" secondAttribute="centerX" id="tcl-r5-d0S"/>
